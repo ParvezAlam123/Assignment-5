@@ -1,0 +1,63 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage{multicol}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[export]{adjustbox}
+\graphicspath{{./}}
+
+\title{Assignment 5}
+\author{Parvez Alam : AI21RESCH01005 }
+\date{ 2 March 2021}
+
+\begin{document}
+
+\maketitle
+\begin{multicols}{2}
+\begin{center}
+    \begin{tabular}{|p{5cm}|}
+         \hline
+         Python Code link :
+         \url{https://github.com/ParvezAlam123/Assignment-5/tree/main/Code} \\
+         \hline
+          
+    \end{tabular}
+\end{center}
+
+\section{Prob. 4.8 :}
+\textbf{ A die is thrown 6 times. If getting an odd number is a success, what is the probability of \\
+(1). 5 successes ?\\
+(2). at least 5 successes ?\\
+(3) at most 5 successes ?
+}\\ \\
+\textbf{Solution:} let X is random variable of getting success or failure.
+\[X \in \{0,1\}\] 
+\[P(X=1)=\frac{3}{6}=\frac{1}{2}=p\] \\
+\(X_1\) is  a Bernoulli random variable \\ \\
+(1)\[ P(X_1=5)=\binom{6}{5}\times \left(\frac{1}{2}\right)^5 \times \left(1-\frac{1}{2}\right)^{(6-5)}\] 
+\[=6 \times \frac{1}{32} \times \frac{1}{2}\]
+\[=0.09375\] \\
+\includegraphics[scale=0.6]{Plot_5(1).png}
+ \\
+ (2) At least 5 success 
+\[P(X_1>=5)=P(X_1=5)+P(X_1=6)\]
+\[=\binom{6}{5}\times \left(\frac{1}{2}\right)^5 \times   \left(\frac{1}{2}\right)^{6-5}+\binom{6}{6} \times \left(\frac{1}{2}\right)^6 \times \left(\frac{1}{2}\right)^0\]
+\[=0.09375+1/64\]
+\[=0.09375+0.015625\]
+\[=0.109375\]
+\includegraphics[width=\columnwidth]{Plot_5(2).png} \\
+(3) At most  5 successes 
+\[P(X_1<=5)=1-P(X_1>=6)\]
+\[=1-\binom{6}{6} \times \left(\frac{1}{2}\right)^6 \times \left(\frac{1}{6}\right)^0\]
+\[=1-0.015625\]
+\[=0.984375\]
+
+\includegraphics[width=\columnwidth]{Plot_5(3).png}
+
+
+
+
+
+\end{multicols}
+\end{document}
